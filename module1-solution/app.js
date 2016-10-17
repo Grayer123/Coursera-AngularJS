@@ -42,12 +42,13 @@
 
    function count(str){
      var arr = str.split(',');
-     var count = 0;
+     var cnt = 0;
      for (var item of arr) {
        if ((item.trim()).length !== 0) {
-         count++;
+         cnt++;
        }
      }
+     return cnt;
    }
 
 })();
