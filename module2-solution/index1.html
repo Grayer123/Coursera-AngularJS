@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+  </head>
+<body ng-app="ShoppingListCheckOffApp">
+   <div class="container" ng-controller="ToBuyController">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group">
+             <input id="lunch-menu" type="text"
+             ng-model="lunch" ng-style="borderColr"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control">
+         </div>
+         <div class="form-group row">
+           <div class="col-sm-5">
+             <button class="btn btn-default" ng-click="checkComma()">Check If Too Much</button>
+           </div>
+           <div class="col-sm-3 col-sm-pull-2">
+             <p style="padding:1.5%">
+              <strong>Notice:NOT consider an empty item</strong>
+             </p>
+
+           </div>
+
+         </div>
+         <div class="form-group message" ng-style="fontColor">
+           <!-- Your message can go here. -->
+           {{msg}}
+         </div>
+   </div>
+
+   <div class="container" ng-controller="AlreadyBoughtController">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group">
+             <input id="lunch-menu" type="text"
+             ng-model="lunch" ng-style="borderColr"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control">
+         </div>
+         <div class="form-group row">
+           <div class="col-sm-5">
+             <button class="btn btn-default" ng-click="checkComma()">Check If Too Much</button>
+           </div>
+           <div class="col-sm-3 col-sm-pull-2">
+             <p style="padding:1.5%">
+              <strong>Notice:NOT consider an empty item</strong>
+             </p>
+
+           </div>
+
+         </div>
+         <div class="form-group message" ng-style="fontColor">
+           <!-- Your message can go here. -->
+           {{msg}}
+         </div>
+   </div>
+
+   <script src="angular.min.js"></script>
+   <script src="app.js"></script>
+
+</body>
+</html>
